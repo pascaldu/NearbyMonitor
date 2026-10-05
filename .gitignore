@@ -1,0 +1,29 @@
+# Android / Gradle
+.gradle/
+build/
+**/build/
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+
+# Signing / secrets
+*.jks
+*.keystore
+keystore.properties
+*.pem
+*.p12
+*.pfx
+.env
+.env.*
+
+# OS / misc
+.DS_Store
+Thumbs.db
+*.log
+
+# Python helper artifacts
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
