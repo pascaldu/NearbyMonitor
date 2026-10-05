@@ -1,0 +1,2 @@
+La base complète de fabricants est générée localement lors de la mise à niveau V0.6.
+Voir tools/update_oui.py.
