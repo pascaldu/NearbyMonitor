@@ -1,0 +1,3 @@
+# Base OUI non embarquée dans l'archive source.
+# Exécutez tools/update_oui.py (automatique via le notebook V0.5 -> V0.6).
+# prefix<TAB>registry<TAB>manufacturer
