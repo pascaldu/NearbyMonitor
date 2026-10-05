@@ -172,3 +172,16 @@ L'inventaire, l'identification et la corrélation sont réalisés localement sur
 ## Statut
 
 Projet expérimental / laboratoire. La détection LAN, l'identification et surtout la localisation RSSI sont de type **best effort** et dépendent des restrictions Android, des équipements et de l'environnement radio.
+
+
+## Archive V0.8
+
+Une copie exacte de l'arborescence V0.8 GitHub-ready est conservée sous forme d'archive ZIP encodée en Base64 dans le dossier `archive/`.
+
+Pour la reconstruire :
+
+```powershell
+python tools/restore_v08_archive.py
+```
+
+Le script vérifie le SHA-256 de l'archive avant de l'écrire. Voir `archive/README.md` pour les détails.
