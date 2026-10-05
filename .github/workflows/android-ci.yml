@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  build:
+  build-archived-v08:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,11 +23,18 @@ jobs:
         with:
           gradle-version: '9.5.0'
 
-      - name: Build debug APK
+      - name: Restore exact V0.8 source archive
+        run: python tools/restore_v08_archive.py
+
+      - name: Extract V0.8 archive
+        run: unzip -q NearbyMonitorV08_GitHub_COMPLETE.zip
+
+      - name: Build archived V0.8 debug APK
+        working-directory: NearbyMonitorV08_GitHub
         run: gradle clean assembleDebug --no-daemon
 
       - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
           name: NearbyMonitor-v0.8-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: NearbyMonitorV08_GitHub/app/build/outputs/apk/debug/app-debug.apk
